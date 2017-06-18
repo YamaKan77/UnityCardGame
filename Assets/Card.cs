@@ -9,7 +9,7 @@ using UnityEngine;
 //	Spades = 4,
 //}
 
-public class Card {
+public class Card : MonoBehaviour {
 	public const int CLUBS = 0;
 	public const int DIAMONDS = 1;
 	public const int HEARTS = 2;

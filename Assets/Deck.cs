@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Deck
+public class Deck : MonoBehaviour
 {
 
 	private Card[] deck;
@@ -14,10 +14,20 @@ public class Deck
 		for (int i = 0; i <= 3; i++)
 			for (int j = 3; j <= 15; j++) 
 			{
-				deck [cardCount] = new Card (j, i);
+				deck[cardCount] = new Card (j, i);
 				cardCount++;
 			}
 		cardsUsed = 0;
+	}
+
+	void ResetDeck()
+	{
+		cardsUsed = 0;
+		for (int i = 0; i < deck.Length; i++) 
+		{
+			Destroy(deck[i]);
+		}
+
 	}
 
 	void shuffle(){
