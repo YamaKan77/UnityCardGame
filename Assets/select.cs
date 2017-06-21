@@ -5,12 +5,11 @@ using UnityEngine.EventSystems;
 
 public class select : MonoBehaviour, IPointerClickHandler
 {
-	public delegate void ClickAction();
-	public static event ClickAction OnClicked;
 
-	public void OnPointerClick(PointerEventData data)
+	public void OnPointerClick(PointerEventData eventData) // 3
 	{
-		Debug.Log ("Clicked");
+		print("I was clicked");
+		transform.position = transform.position + Vector3.up * 10;
 	}
 
 
